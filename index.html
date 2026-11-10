@@ -1565,22 +1565,28 @@ body::before {
 }
 
 
+
 /* CONFIRMACIÓN · TEXTOS RESALTADOS */
 
 .confirmacion-resaltado {
   font-weight: 700;
+
   background-image: linear-gradient(
     to right,
     #C6D94D,
     #C6D94D
   );
+
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 0% 2px;
+
+  padding-bottom: 3px;
+
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-      padding-bottom: 3px;
 }
+
 
 /* SUBRAYADO AL ENTRAR EN PANTALLA */
 
@@ -1608,6 +1614,31 @@ body::before {
   }
 }
 
+
+/* MÚSICA DE FONDO · CONTROL FLOTANTE */
+.control-musica {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10000;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(183, 217, 107, 0.85);
+  border-radius: 50%;
+  background: #075B4B;
+  color: #F5F3EC;
+  box-shadow: 0 4px 18px rgba(0, 35, 25, 0.24);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 21px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.control-musica.visible { display: flex; }
+.control-musica:hover { background: #0A705C; transform: scale(1.05); }
+.control-musica:focus-visible { outline: 3px solid #B7D96B; outline-offset: 3px; }
+
   </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1621,6 +1652,11 @@ body::before {
 </head>
 
 <body>
+<!-- AUDIO · Se inicia únicamente al pulsar «ABRIR INVITACIÓN» -->
+<audio id="musicaDany" src="musica.mp3" preload="none" loop></audio>
+<button id="controlMusica" class="control-musica" type="button"
+        aria-label="Pausar música" title="Pausar música" aria-pressed="true">❚❚</button>
+
 
   <main class="portada">
     <p class="etiqueta">Mis quince años</p>
@@ -2206,9 +2242,39 @@ body::before {
   const portada = document.querySelector(".portada");
   const bienvenida = document.getElementById("bienvenida");
   const seccion = document.getElementById("invitacion");
+  const musica = document.getElementById("musicaDany");
+  const controlMusica = document.getElementById("controlMusica");
+
+  function actualizarControlMusica() {
+    const reproduciendo = !musica.paused;
+    controlMusica.textContent = reproduciendo ? "❚❚" : "▶";
+    controlMusica.setAttribute("aria-label", reproduciendo ? "Pausar música" : "Reproducir música");
+    controlMusica.title = reproduciendo ? "Pausar música" : "Reproducir música";
+    controlMusica.setAttribute("aria-pressed", String(reproduciendo));
+  }
+
+  musica.volume = 0.55;
+  musica.addEventListener("play", actualizarControlMusica);
+  musica.addEventListener("pause", actualizarControlMusica);
+  musica.addEventListener("error", function () {
+    controlMusica.title = "No se pudo cargar musica.mp3";
+    controlMusica.setAttribute("aria-label", "No se pudo cargar la música");
+  });
+
+  controlMusica.addEventListener("click", function () {
+    if (musica.paused) {
+      musica.play().catch(function () { actualizarControlMusica(); });
+    } else {
+      musica.pause();
+    }
+  });
 
   boton.addEventListener("click", function(event) {
     event.preventDefault();
+
+    // Este clic del visitante autoriza el inicio de la reproducción.
+    controlMusica.classList.add("visible");
+    musica.play().catch(function () { actualizarControlMusica(); });
 
     portada.classList.add("saliendo");
 
@@ -2218,7 +2284,7 @@ body::before {
       });
 
       setTimeout(function() {
-        bienvenida.classList.add("visible");
+        if (bienvenida) bienvenida.classList.add("visible");
       }, 500);
 
     }, 650);
