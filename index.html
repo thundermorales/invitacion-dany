@@ -1,0 +1,2465 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<!-- VISTA PREVIA PARA WHATSAPP Y REDES SOCIALES -->
+
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+      content="Mis XV años · Dany">
+
+<meta property="og:description"
+      content="17 de diciembre de 2026. ¡Te espero para celebrar!">
+
+<meta property="og:url"
+      content="https://thundermorales.github.io/invitacion-dany/">
+
+<meta property="og:image"
+      content="https://thundermorales.github.io/invitacion-dany/imagenes/portada-compartir.jpg">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis XV | Dany</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #075B4B;
+      color: #F5F3EC;
+      font-family: Arial, sans-serif;
+    }
+
+   
+.portada {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  overflow: hidden;
+
+  /* Preparación para las diagonales */
+  position: relative;
+  isolation: isolate;
+}
+
+
+    .etiqueta {
+      font-size: 12px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: aparecer 1.5s ease both;
+    }
+
+   
+.numero {
+  font-family: Georgia, serif;
+  font-size: clamp(120px, 35vw, 300px);
+  font-weight: normal;
+  line-height: 0.85;
+
+  /* Color original de respaldo */
+  color: #B7D96B;
+
+  /* Acabado verde lima satinado */
+  background: linear-gradient(
+    110deg,
+    #9FBE59 0%,
+    #B7D96B 24%,
+    #D5ED94 43%,
+    #B7D96B 58%,
+    #A8C862 78%,
+    #B7D96B 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Relieve suave */
+  filter: drop-shadow(1px 3px 2px rgba(0, 35, 25, 0.38));
+
+  /* Conservamos la animación original */
+  animation: revelar 1.8s ease both;
+}
+
+
+    .nombre {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-weight: normal;
+      font-size: clamp(65px, 16vw, 130px);
+      margin-top: -5px;
+      animation: aparecer 2s ease 0.5s both;
+      text-shadow:
+  1px 3px 4px rgba(0, 30, 22, 0.45);
+    }
+
+    .fecha {
+      font-size: 13px;
+      letter-spacing: 4px;
+      margin-top: 35px;
+      animation: aparecer 2s ease 1s both;
+    }
+
+    .boton {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 55px;
+      padding: 16px 32px;
+      border: 1px solid #B7D96B;
+      border-radius: 40px;
+      color: #F5F3EC;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 2px;
+      transition: 0.3s ease;
+      animation: aparecer 2s ease 1.4s both;
+    }
+
+    .boton:hover {
+      background: #B7D96B;
+      color: #075B4B;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes revelar {
+      from {
+        opacity: 0;
+        transform: scale(1.2);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+/* TRANSICIÓN DE PORTADA */
+
+.portada {
+  position: relative;
+  z-index: 2;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.portada.saliendo {
+  opacity: 0;
+  transform: translateY(-50px);
+  pointer-events: none;
+}
+
+/* SEGUNDA PANTALLA */
+
+#invitacion {
+  min-height: 100vh;
+  min-height: 100svh;
+  background: #F5F3EC;
+  color: #075B4B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 35px;
+}
+
+.bienvenida {
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.bienvenida.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bienvenida h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 9vw, 75px);
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.bienvenida p {
+  font-size: 15px;
+  line-height: 1.9;
+  letter-spacing: 1px;
+}
+
+/* CEREMONIA Y RECEPCIÓN */
+
+.eventos {
+  background: #F5F3EC;
+  color: #075B4B;
+  padding: 100px 24px;
+}
+
+.eventos-titulo {
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 8vw, 75px);
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.evento {
+  max-width: 650px;
+  margin: 0 auto 80px;
+  text-align: center;
+  padding: 45px 25px;
+  border-top: 1px solid #A9B8B3;
+}
+
+.evento:last-child {
+  margin-bottom: 0;
+}
+
+.evento-etiqueta {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #4E806B;
+  margin-bottom: 20px;
+}
+
+.evento h3 {
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 6vw, 48px);
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.evento-hora {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.evento-direccion {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.evento-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 28px;
+  border: 1px solid #075B4B;
+  border-radius: 40px;
+  color: #075B4B;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.evento-boton:hover {
+  background: #075B4B;
+  color: #F5F3EC;
+}
+
+/* MESA DE REGALOS */
+
+.regalos {
+  min-height: 85vh;
+  min-height: 85svh;
+  background: #075B4B;
+  color: #F5F3EC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 25px;
+}
+
+.regalos-etiqueta {
+  color: #B7D96B;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.regalos-titulo {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: clamp(42px, 9vw, 80px);
+  margin-bottom: 30px;
+}
+
+.regalos-texto {
+  max-width: 480px;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+.regalos-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 30px;
+  border: 1px solid #B7D96B;
+  border-radius: 40px;
+  color: #F5F3EC;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.regalos-boton:hover {
+  background: #B7D96B;
+  color: #075B4B;
+}
+
+.regalos-referencia {
+  color: #B7D96B;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 25px;
+}
+
+/* CONFIRMACION DE ASISTENCIA */
+
+.confirmacion {
+  background: #F5F3EC;
+  color: #075B4B;
+  min-height: 85vh;
+  min-height: 85svh;
+  padding: 100px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.confirmacion-etiqueta {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.confirmacion-titulo {
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 9vw, 80px);
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.confirmacion-texto {
+  max-width: 480px;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+.confirmacion-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 17px 30px;
+  border: 1px solid #075B4B;
+  border-radius: 40px;
+  background: #075B4B;
+  color: #F5F3EC;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.confirmacion-boton:hover {
+  background: transparent;
+  color: #075B4B;
+}
+
+.confirmacion-nota {
+  margin-top: 25px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #4E806B;
+}
+
+/* CUENTA REGRESIVA */
+
+.cuenta-regresiva {
+  background: #075B4B;
+  color: #F5F3EC;
+  padding: 110px 20px;
+  text-align: center;
+}
+
+.contador-etiqueta {
+  color: #B7D96B;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.contador-titulo {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: clamp(38px, 8vw, 75px);
+  margin-bottom: 45px;
+}
+
+.contador-numeros {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.contador-unidad {
+  min-width: 0;
+}
+
+.contador-caja {
+  background: #F5F3EC;
+  color: #075B4B;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contador-valor {
+  font-family: Georgia, serif;
+  font-size: clamp(26px, 6vw, 55px);
+  font-weight: normal;
+  font-variant-numeric: tabular-nums;
+}
+
+.contador-label {
+  display: block;
+  color: #B7D96B;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+
+.contador-fecha {
+  margin-top: 55px;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 380px) {
+  .contador-numeros {
+    gap: 7px;
+  }
+
+  .contador-caja {
+    border-radius: 11px;
+  }
+
+  .contador-label {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+}
+
+/* CODIGO DE VESTIMENTA */
+
+.vestimenta {
+  background: #F5F3EC;
+  color: #075B4B;
+  padding: 100px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.vestimenta-etiqueta {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #4E806B;
+  margin-bottom: 25px;
+}
+
+.vestimenta-titulo {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: clamp(55px, 12vw, 95px);
+  margin-bottom: 35px;
+}
+
+.vestimenta-iconos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  margin-bottom: 25px;
+}
+
+.vestimenta-iconos svg {
+  width: 105px;
+  height: 145px;
+  fill: none;
+  stroke: #075B4B;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.vestimenta-linea {
+  width: 65px;
+  height: 1px;
+  background: #A9B8B3;
+  margin: 10px auto 0;
+}
+
+/* PADRES Y PADRINOS */
+
+.familia {
+  background: #F5F3EC;
+  color: #075B4B;
+  padding: 100px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.familia-etiqueta {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #4E806B;
+  margin-bottom: 25px;
+}
+
+.familia-titulo {
+  font-family: Georgia, serif;
+  font-size: clamp(36px, 8vw, 70px);
+  font-style: italic;
+  font-weight: normal;
+  max-width: 650px;
+  margin-bottom: 50px;
+}
+
+.familia-subtitulo {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.familia-nombres {
+  font-family: Georgia, serif;
+  font-size: clamp(20px, 4vw, 28px);
+  line-height: 1.6;
+}
+
+.familia-separador {
+  width: 65px;
+  height: 1px;
+  background: #A9B8B3;
+  margin: 45px auto;
+}
+
+/* RETRATO EDITORIAL DE DANY */
+
+/* BIENVENIDA INTEGRADA */
+
+.editorial-bienvenida {
+  max-width: 650px;
+  margin: 0 auto 10px;
+  text-align: center;
+}
+
+.editorial-titulo {
+  font-family: Georgia, serif;
+  font-size: clamp(36px, 7vw, 68px);
+  font-weight: normal;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: #075B4B;
+  margin: 15px 0 20px;
+}
+
+
+.editorial-intro {
+  max-width: 440px;
+  margin: -25px auto 0;
+
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: clamp(16px, 2vw, 19px);
+  font-weight: normal;
+  line-height: 1.65;
+
+  text-align: center;
+  color: #4E806B;
+}
+
+
+@media (max-width: 480px) {
+  .editorial-titulo {
+    font-size: 38px;
+  }
+
+  .editorial-intro {
+    font-size: 13px;
+    padding: 0 12px;
+  }
+}
+
+.editorial-dany {
+  background: #F5F3EC;
+  color: #075B4B;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+.editorial-contenido {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.editorial-etiqueta {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.editorial-escena {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  aspect-ratio: 4 / 5;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+}
+
+.editorial-xv {
+  position: absolute;
+  top: -3%;
+  left: 55%;
+  transform: translateX(-50%);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(230px, 58vw, 500px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: #075B4B;
+  z-index: 0;
+}
+
+.editorial-foto {
+  position: absolute;
+  inset: 8% 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+
+.editorial-foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+
+  /* Sombra editorial suave */
+  
+filter:
+  drop-shadow(0 14px 17px rgba(0, 45, 32, 0.23))
+  drop-shadow(0 5px 7px rgba(0, 45, 32, 0.14));
+
+}
+
+
+.editorial-placeholder {
+  width: 65%;
+  height: 75%;
+  border: 1px dashed #A9B8B3;
+  border-radius: 180px 180px 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  color: #4E806B;
+  font-size: 13px;
+  line-height: 1.8;
+  background: rgba(169, 184, 179, 0.12);
+}
+
+
+.editorial-nombre {
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-5deg);
+  width: 100%;
+  z-index: 2;
+
+  font-family: "Allura", cursive;
+font-style: normal;
+  font-size: clamp(70px, 16vw, 140px);
+  font-weight: normal;
+  line-height: 1;
+
+  /* Firma blanca */
+  color: #FFFFFF;
+
+  /* Sombra suave para destacar sobre los jeans */
+  text-shadow:
+    1px 2px 3px rgba(0, 30, 22, 0.45),
+    0 5px 10px rgba(0, 30, 22, 0.20);
+}
+
+
+.editorial-frase {
+  font-size: 13px;
+  letter-spacing: 2px;
+  line-height: 1.8;
+  margin-top: 25px;
+}
+
+@media (max-width: 480px) {
+  .editorial-dany {
+    padding: 70px 12px;
+  }
+
+  .editorial-nombre {
+    bottom: 6%;
+  }
+
+  .editorial-frase {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+}
+
+
+/* TEXTURA EDITORIAL DE PAPEL */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.45' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.8'/%3E%3C/svg%3E");
+
+  background-size: 200px 200px;
+  opacity: 0.38;
+  mix-blend-mode: soft-light;
+}
+
+/* ILUMINACIÓN SUAVE DE PAPEL SATINADO */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+
+  background:
+    radial-gradient(
+      ellipse 85% 65% at 18% 12%,
+      rgba(255, 255, 255, 0.22) 0%,
+      rgba(255, 255, 255, 0.08) 42%,
+      transparent 75%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 35%,
+      rgba(0, 0, 0, 0.035) 100%
+    );
+
+  opacity: 0.8;
+}
+
+/* SATINADO CÁLIDO PARA EL FONDO MARFIL */
+
+.editorial-dany {
+  position: relative;
+  isolation: isolate;
+}
+
+.editorial-dany::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      ellipse 85% 55% at 18% 12%,
+      rgba(255, 255, 255, 0.85) 0%,
+      rgba(255, 255, 255, 0.30) 45%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse 90% 65% at 90% 85%,
+      rgba(155, 137, 103, 0.19) 0%,
+      transparent 75%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.20),
+      rgba(137, 121, 91, 0.09)
+    );
+}
+
+/* ARCO MARFIL DETRÁS DE DANY */
+
+.editorial-escena {
+  position: relative;
+  isolation: isolate;
+}
+
+.editorial-escena::before {
+  content: "";
+  position: absolute;
+
+  width: 75%;
+  height: 70%;
+
+  left: 50%;
+  bottom: 17%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50% 50% 0 0 / 38% 38% 0 0;
+
+  background: linear-gradient(
+    135deg,
+    #E4D8C8 0%,
+    #D8C9B7 48%,
+    #E9DFD1 100%
+  );
+
+  opacity: 0.75;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* BASE DECORATIVA BAJO DANY */
+
+.editorial-base {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: clamp(20px, 5vw, 42px);
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    180deg,
+    #438C70 0%,
+    #075B4B 48%,
+    #043D34 100%
+  );
+
+  box-shadow:
+    0 12px 18px rgba(0, 45, 32, 0.18),
+    inset 0 3px 5px rgba(255, 255, 255, 0.12);
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* CONFETI VERDE - RETRATO DANY */
+
+.editorial-escena {
+  position: relative;
+}
+
+.confeti-dany {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.confeti-dany span {
+  position: absolute;
+  top: -18px;
+  width: 7px;
+  height: 13px;
+  border-radius: 1px;
+  background: #B7D96B;
+  opacity: 0;
+  animation: caerConfeti 9s linear infinite;
+}
+
+/* Lado izquierdo */
+.confeti-dany span:nth-child(1) {
+  left: 5%;
+  animation-delay: -1s;
+}
+.confeti-dany span:nth-child(2) {
+  left: 12%;
+  background: #075B4B;
+  animation-delay: -5s;
+  animation-duration: 11s;
+}
+.confeti-dany span:nth-child(3) {
+  left: 19%;
+  background: #8DBD65;
+  animation-delay: -8s;
+}
+.confeti-dany span:nth-child(4) {
+  left: 9%;
+  background: #4E806B;
+  animation-delay: -3s;
+  animation-duration: 12s;
+}
+.confeti-dany span:nth-child(5) {
+  left: 24%;
+  animation-delay: -7s;
+}
+
+/* Lado derecho */
+.confeti-dany span:nth-child(6) {
+  left: 76%;
+  background: #075B4B;
+  animation-delay: -4s;
+}
+.confeti-dany span:nth-child(7) {
+  left: 88%;
+  animation-delay: -9s;
+  animation-duration: 12s;
+}
+.confeti-dany span:nth-child(8) {
+  left: 95%;
+  background: #8DBD65;
+  animation-delay: -2s;
+}
+.confeti-dany span:nth-child(9) {
+  left: 82%;
+  background: #4E806B;
+  animation-delay: -6s;
+  animation-duration: 11s;
+}
+.confeti-dany span:nth-child(10) {
+  left: 92%;
+  animation-delay: -10s;
+}
+
+/* Caída suave y oscilante */
+@keyframes caerConfeti {
+  0% {
+    transform: translate3d(0, -15px, 0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  45% {
+    transform: translate3d(10px, 40vh, 0) rotate(135deg);
+  }
+
+  85% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate3d(-8px, 85vh, 0) rotate(300deg);
+    opacity: 0;
+  }
+}
+
+/* Respeta usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .confeti-dany span {
+    animation: none;
+    opacity: 0.55;
+    top: 20%;
+  }
+}
+
+
+
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+/* CORAZÓN DECORATIVO · PADRES Y PADRINOS */
+
+.familia {
+  position: relative;
+  isolation: isolate;
+}
+
+.familia-corazon {
+  position: absolute;
+  width: clamp(260px, 60vw, 440px);
+  height: auto;
+  top: var(--centro-corazon, 50%);
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  z-index: -1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.familia-corazon-trazo {
+  fill: none;
+  stroke: #C68F98;
+  stroke-width: 9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.75;
+}
+
+.familia-corazon-textura {
+  fill: none;
+  stroke: #C68F98;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  opacity: 0.4;
+}
+
+/* ANIMACIÓN DEL CORAZÓN DE CRAYÓN */
+
+.familia-corazon-trazo,
+.familia-corazon-textura {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.familia-corazon.animar .familia-corazon-trazo {
+  animation: dibujarCorazon 3.5s ease-in-out forwards;
+}
+
+.familia-corazon.animar .familia-corazon-textura {
+  animation: dibujarCorazon 3.5s ease-in-out 0.35s forwards;
+}
+
+@keyframes dibujarCorazon {
+  from {
+    stroke-dashoffset: 1000;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .familia-corazon-trazo,
+  .familia-corazon-textura {
+    stroke-dashoffset: 0;
+    animation: none !important;
+  }
+}
+
+/* ROSARIO DECORATIVO · CEREMONIA */
+
+.evento-ceremonia {
+  position: relative;
+  isolation: isolate;
+}
+
+.rosario-decorativo {
+  position: absolute;
+  width: min(100%, 420px);
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.rosario-hilo {
+  fill: none;
+  stroke: #9CA991;
+  stroke-width: 1.3;
+  opacity: 0.35;
+}
+
+.rosario-cuentas circle {
+  fill: #9CA991;
+  stroke: #F5F3EC;
+  stroke-width: 1;
+  opacity: 0.65;
+}
+
+@media (max-width: 480px) {
+  .rosario-decorativo {
+    width: 100%;
+  }
+
+  .rosario-cuentas circle {
+    opacity: 0.45;
+  }
+}
+
+/* ANIMACIÓN DEL ROSARIO */
+
+.rosario-hilo {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+}
+
+.rosario-decorativo.animar .rosario-hilo {
+  animation: dibujarHiloRosario 3.5s ease-in-out forwards;
+}
+
+@keyframes dibujarHiloRosario {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.rosario-cuentas circle {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0.3);
+}
+
+.rosario-decorativo.animar .rosario-cuentas circle {
+  animation: aparecerCuenta 0.65s ease-out forwards;
+}
+
+@keyframes aparecerCuenta {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  to {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+}
+
+/* Aparición escalonada de las cuentas */
+
+.rosario-cuentas circle:nth-child(10n + 1) { animation-delay: 0.3s; }
+.rosario-cuentas circle:nth-child(10n + 2) { animation-delay: 0.6s; }
+.rosario-cuentas circle:nth-child(10n + 3) { animation-delay: 0.9s; }
+.rosario-cuentas circle:nth-child(10n + 4) { animation-delay: 1.2s; }
+.rosario-cuentas circle:nth-child(10n + 5) { animation-delay: 1.5s; }
+.rosario-cuentas circle:nth-child(10n + 6) { animation-delay: 1.8s; }
+.rosario-cuentas circle:nth-child(10n + 7) { animation-delay: 2.1s; }
+.rosario-cuentas circle:nth-child(10n + 8) { animation-delay: 2.4s; }
+.rosario-cuentas circle:nth-child(10n + 9) { animation-delay: 2.7s; }
+.rosario-cuentas circle:nth-child(10n + 10) { animation-delay: 3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rosario-hilo {
+    stroke-dashoffset: 0;
+  }
+
+  .rosario-cuentas circle {
+    opacity: 0.65;
+    transform: none;
+  }
+
+  .rosario-decorativo.animar .rosario-hilo,
+  .rosario-decorativo.animar .rosario-cuentas circle {
+    animation: none;
+  }
+}
+
+/* MARGARITAS DECORATIVAS · RECEPCIÓN */
+
+.evento-recepcion {
+  position: relative;
+  isolation: isolate;
+}
+
+.jardin-margaritas {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.margarita {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  overflow: visible;
+  opacity: 0.8;
+}
+
+.margarita-petalos ellipse {
+  fill: #FFFDF7;
+  stroke: #D9D1C3;
+  stroke-width: 1.3;
+}
+
+.margarita-centro {
+  fill: #D9B85F;
+  stroke: #B99A4D;
+  stroke-width: 1.5;
+}
+
+/* DISTRIBUCIÓN ASIMÉTRICA */
+
+.margarita-1 {
+  top: 10%;
+  left: 12%;
+  transform: rotate(-15deg);
+}
+
+.margarita-2 {
+  top: 32%;
+  right: 9%;
+  width: 36px;
+  height: 36px;
+  transform: rotate(20deg);
+}
+
+.margarita-3 {
+  bottom: 25%;
+  left: 8%;
+  width: 32px;
+  height: 32px;
+  transform: rotate(12deg);
+}
+
+.margarita-4 {
+  bottom: 8%;
+  right: 14%;
+  width: 43px;
+  height: 43px;
+  transform: rotate(-10deg);
+}
+
+/* DOS MARGARITAS ADICIONALES */
+
+.margarita-5 {
+  top: 49%;
+  left: 15%;
+  width: 39px;
+  height: 39px;
+  transform: rotate(-22deg);
+}
+
+.margarita-6 {
+  bottom: 42%;
+  right: 16%;
+  width: 34px;
+  height: 34px;
+  transform: rotate(18deg);
+}
+
+@media (max-width: 480px) {
+  .margarita {
+    opacity: 0.65;
+  }
+
+  .margarita-1 { left: 2%; }
+  .margarita-2 { right: 1%; }
+  .margarita-3 { left: 1%; }
+  .margarita-4 { right: 3%; }
+  .margarita-5 { left: 3%; }
+.margarita-6 { right: 3%; }
+}
+
+/* ANIMACIÓN · MARGARITAS FLORECIENDO */
+
+.margarita-petalos {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0.05) rotate(-35deg);
+  opacity: 0;
+}
+
+.margarita-centro {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.jardin-margaritas.animar .margarita-petalos {
+  animation: florecerMargarita 0.5s
+    cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.jardin-margaritas.animar .margarita-centro {
+  animation: aparecerCentro 0.5s ease-out forwards;
+}
+
+/* CADA FLOR DESPIERTA EN UN MOMENTO DIFERENTE */
+
+
+.margarita-1 { --flor-delay: 0.2s; }
+.margarita-2 { --flor-delay: 0.4s; }
+.margarita-3 { --flor-delay: 0.6s; }
+.margarita-4 { --flor-delay: 0.8s; }
+.margarita-5 { --flor-delay: 1.0s; }
+.margarita-6 { --flor-delay: 1.2s; }
+
+
+.jardin-margaritas.animar .margarita-petalos {
+  animation-delay: var(--flor-delay);
+}
+
+.jardin-margaritas.animar .margarita-centro {
+  animation-delay: calc(var(--flor-delay) + 0.5s);
+}
+
+@keyframes florecerMargarita {
+  from {
+    transform: scale(0.05) rotate(-35deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes aparecerCentro {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+  .margarita-petalos,
+  .margarita-centro {
+    transform: none;
+    opacity: 1;
+    animation: none !important;
+  }
+}
+
+/* DRESS CODE · DIBUJO PROGRESIVO */
+
+.vestimenta-iconos svg path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+}
+
+.vestimenta-iconos.animar svg path {
+  animation: dibujarVestimenta 2s ease-in-out forwards;
+}
+
+
+/* Detalles interiores del vestido */
+.vestimenta-iconos.animar svg path:nth-of-type(n+2) {
+  animation-delay: 0.3s;
+}
+
+/* El traje comienza un poquito después */
+.vestimenta-iconos.animar svg:nth-of-type(2) path {
+  animation-delay: 0.25s;
+}
+
+/* Detalles interiores del traje */
+.vestimenta-iconos.animar svg:nth-of-type(2) path:nth-of-type(n+2) {
+  animation-delay: 0.55s;
+}
+
+
+
+/* BOTONES DEL TRAJE · APARECEN AL FINAL */
+
+.vestimenta-iconos svg circle {
+  opacity: 0;
+}
+
+
+
+.vestimenta-iconos.animar svg circle {
+  animation: aparecerDetalle 0.2s ease-out 1s both;
+}
+
+
+
+
+@keyframes dibujarVestimenta {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes aparecerDetalle {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vestimenta-iconos svg path {
+    stroke-dashoffset: 0;
+    animation: none !important;
+  }
+
+  .vestimenta-iconos svg circle {
+    opacity: 1;
+    animation: none !important;
+  }
+}
+
+/* MOÑO DECORATIVO · MESA DE REGALOS */
+
+.regalos {
+  position: relative;
+  isolation: isolate;
+}
+
+
+
+.regalos-mono {
+  position: absolute;
+  width: min(155%, 1050px);
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  z-index: -1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+
+
+.mono-trazo {
+  fill: none;
+  stroke: #043D34;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.45;
+}
+
+/* MOÑO · ANIMACIÓN DE DIBUJO */
+
+.regalos-mono .mono-trazo {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+}
+
+.regalos-mono.animar .mono-lazada-1 {
+  animation: dibujarMono 1.1s ease-in-out 0s forwards;
+}
+
+.regalos-mono.animar .mono-lazada-2 {
+  animation: dibujarMono 1.1s ease-in-out 0.15s forwards;
+}
+
+
+/* NUDO CENTRAL · DESPUÉS DE LAS OREJITAS */
+
+.regalos-mono.animar .mono-nudo {
+  animation: dibujarMono 0.2s ease-out 0.5s forwards;
+}
+
+
+/* COLITAS · DESPUÉS DEL NUDO */
+.regalos-mono.animar .mono-liston-1 {
+  animation: dibujarMono 0.75s ease-out 1.1s forwards;
+}
+
+.regalos-mono.animar .mono-liston-2 {
+  animation: dibujarMono 0.75s ease-out 1.2s forwards;
+}
+
+
+@keyframes dibujarMono {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Accesibilidad: reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .regalos-mono .mono-trazo {
+    stroke-dashoffset: 0;
+    animation: none !important;
+  }
+}
+
+/* CONFIRMACIÓN · LOGOTIPO WHATSAPP */
+
+
+.confirmacion-whatsapp {
+  display: inline-block;
+  width: 1.18em;
+  height: 1.18em;
+  color: #25D366;
+  vertical-align: -0.20em;
+  margin: 0 0.12em;
+  flex-shrink: 0;
+}
+
+
+/* CONFIRMACIÓN · TEXTOS RESALTADOS */
+
+.confirmacion-resaltado {
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    #C6D94D,
+    #C6D94D
+  );
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 0% 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* SUBRAYADO AL ENTRAR EN PANTALLA */
+
+.confirmacion.animar .confirmacion-resaltado {
+  animation: subrayarConfirmacion 0.85s ease-out forwards;
+}
+
+.confirmacion.animar .confirmacion-nota
+.confirmacion-resaltado {
+  animation-delay: 0.35s;
+}
+
+@keyframes subrayarConfirmacion {
+  to {
+    background-size: 100% 2px;
+  }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+  .confirmacion-resaltado {
+    background-size: 100% 2px;
+    animation: none !important;
+  }
+}
+
+  </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <main class="portada">
+    <p class="etiqueta">Mis quince años</p>
+
+    <h1 class="numero">XV</h1>
+    <h2 class="nombre">Dany</h2>
+
+    <p class="fecha">17 · DICIEMBRE · 2026</p>
+
+<a href="#invitacion" class="boton" id="abrirInvitacion">
+  ABRIR INVITACIÓN
+</a>
+  </main>
+
+ 
+
+<!-- RETRATO EDITORIAL DE DANY -->
+
+
+<section class="editorial-dany" id="invitacion">
+
+  <div class="editorial-contenido">
+
+    <div class="editorial-bienvenida">
+
+      <p class="editorial-etiqueta">
+        MIS QUINCE AÑOS
+      </p>
+
+      <h2 class="editorial-titulo">
+        Un día para recordar.
+      </h2>
+
+    </div>
+
+    <div class="editorial-escena">
+
+<!-- CONFETI DECORATIVO -->
+<div class="confeti-dany" aria-hidden="true">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+      <span class="editorial-xv" aria-hidden="true">
+        XV
+      </span>
+
+<!-- BASE DECORATIVA DE DANY -->
+<div class="editorial-base" aria-hidden="true"></div>
+
+      <div class="editorial-foto" id="contenedorFoto">
+
+        <img
+          src="imagenes/dany-retrato.png"
+          alt="Retrato de Dany"
+        >
+
+      </div>
+
+      <h2 class="editorial-nombre">
+        Dany
+      </h2>
+
+    </div>
+
+    <!-- MENSAJE EMOTIVO COMO PIE DE FOTO -->
+    <p class="editorial-intro">
+      Hay momentos que marcan el comienzo de nuevas historias.
+      Me encantará compartir contigo uno de los más especiales
+      de mi vida.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- PADRES Y PADRINOS -->
+
+<section class="familia" id="familia">
+
+  <p class="familia-etiqueta">
+    Con amor y gratitud
+  </p>
+
+  <h2 class="familia-titulo">
+    Acompañada de quienes más quiero
+  </h2>
+
+<!-- CORAZÓN ROSA ANTIGUO -->
+<svg class="familia-corazon"
+     viewBox="0 0 240 220"
+     aria-hidden="true">
+
+  <path class="familia-corazon-trazo"
+        d="M120 194
+           C92 169, 32 132, 30 83
+           C28 43, 78 28, 120 78
+           C160 25, 211 43, 210 85
+           C209 131, 151 169, 120 194" />
+
+  <path class="familia-corazon-textura"
+        d="M118 190
+           C86 162, 35 128, 35 83
+           C34 48, 80 34, 120 83
+           C160 31, 205 47, 205 86
+           C204 127, 148 166, 118 190" />
+
+</svg>
+
+  <p class="familia-subtitulo">
+    Con el amor de mis padres
+  </p>
+
+  <div class="familia-nombres">
+    <p>María Tomy Alejandra Posada Romero</p>
+    <p>Jaime Arturo Águila Morales</p>
+  </div>
+
+  <div class="familia-separador"></div>
+
+  <p class="familia-subtitulo">
+    Y la compañía de mis padrinos
+  </p>
+
+  <div class="familia-nombres">
+    <p>Raziel Posada Romero</p>
+    <p>Lorena Erandeni Martínez Jiménez</p>
+  </div>
+
+</section>
+
+<section class="eventos" id="eventos">
+
+  <h2 class="eventos-titulo">
+    El gran día
+  </h2>
+
+  <article class="evento evento-ceremonia">
+
+<!-- CUENTAS DECORATIVAS DEL ROSARIO -->
+<svg class="rosario-decorativo"
+     viewBox="0 0 360 390"
+     aria-hidden="true">
+
+  <path class="rosario-hilo"
+        d="M58 35 C12 105, 22 255, 80 345" />
+
+  <path class="rosario-hilo"
+        d="M302 35 C348 105, 338 255, 280 345" />
+
+  <g class="rosario-cuentas">
+    <circle cx="58" cy="35" r="5"/>
+    <circle cx="43" cy="65" r="4"/>
+    <circle cx="33" cy="96" r="4"/>
+    <circle cx="28" cy="128" r="5"/>
+    <circle cx="29" cy="160" r="4"/>
+    <circle cx="33" cy="192" r="4"/>
+    <circle cx="41" cy="225" r="5"/>
+    <circle cx="51" cy="257" r="4"/>
+    <circle cx="64" cy="291" r="4"/>
+    <circle cx="80" cy="345" r="5"/>
+
+    <circle cx="302" cy="35" r="5"/>
+    <circle cx="317" cy="65" r="4"/>
+    <circle cx="327" cy="96" r="4"/>
+    <circle cx="332" cy="128" r="5"/>
+    <circle cx="331" cy="160" r="4"/>
+    <circle cx="327" cy="192" r="4"/>
+    <circle cx="319" cy="225" r="5"/>
+    <circle cx="309" cy="257" r="4"/>
+    <circle cx="296" cy="291" r="4"/>
+    <circle cx="280" cy="345" r="5"/>
+  </g>
+
+</svg>
+
+    <p class="evento-etiqueta">
+      Ceremonia religiosa
+    </p>
+
+    <h3>
+      Templo de la Santísima Trinidad
+    </h3>
+
+    <p class="evento-hora">
+      5:00 PM
+    </p>
+
+    <p class="evento-direccion">
+      Av. Reforma 130<br>
+      Centro Histórico, Puebla
+    </p>
+
+    <a
+      class="evento-boton"
+      href="https://www.google.com/maps/search/?api=1&query=Templo+de+la+Santisima+Trinidad+Av+Reforma+130+Puebla"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VER UBICACIÓN
+    </a>
+
+  </article>
+
+  <article class="evento evento-recepcion">
+
+<!-- MARGARITAS DECORATIVAS · RECEPCIÓN -->
+<div class="jardin-margaritas" aria-hidden="true">
+
+  <svg class="margarita margarita-1" viewBox="0 0 100 100">
+    <g class="margarita-petalos">
+      <ellipse cx="50" cy="28" rx="9" ry="19"/>
+      <ellipse cx="50" cy="72" rx="9" ry="19"/>
+      <ellipse cx="28" cy="50" rx="19" ry="9"/>
+      <ellipse cx="72" cy="50" rx="19" ry="9"/>
+      <ellipse cx="34" cy="34" rx="9" ry="18" transform="rotate(-45 34 34)"/>
+      <ellipse cx="66" cy="34" rx="9" ry="18" transform="rotate(45 66 34)"/>
+      <ellipse cx="34" cy="66" rx="9" ry="18" transform="rotate(45 34 66)"/>
+      <ellipse cx="66" cy="66" rx="9" ry="18" transform="rotate(-45 66 66)"/>
+    </g>
+    <circle class="margarita-centro" cx="50" cy="50" r="12"/>
+  </svg>
+
+  <svg class="margarita margarita-2" viewBox="0 0 100 100">
+    <g class="margarita-petalos">
+      <ellipse cx="50" cy="28" rx="9" ry="19"/>
+      <ellipse cx="50" cy="72" rx="9" ry="19"/>
+      <ellipse cx="28" cy="50" rx="19" ry="9"/>
+      <ellipse cx="72" cy="50" rx="19" ry="9"/>
+      <ellipse cx="34" cy="34" rx="9" ry="18" transform="rotate(-45 34 34)"/>
+      <ellipse cx="66" cy="34" rx="9" ry="18" transform="rotate(45 66 34)"/>
+      <ellipse cx="34" cy="66" rx="9" ry="18" transform="rotate(45 34 66)"/>
+      <ellipse cx="66" cy="66" rx="9" ry="18" transform="rotate(-45 66 66)"/>
+    </g>
+    <circle class="margarita-centro" cx="50" cy="50" r="12"/>
+  </svg>
+
+  <svg class="margarita margarita-3" viewBox="0 0 100 100">
+    <g class="margarita-petalos">
+      <ellipse cx="50" cy="28" rx="9" ry="19"/>
+      <ellipse cx="50" cy="72" rx="9" ry="19"/>
+      <ellipse cx="28" cy="50" rx="19" ry="9"/>
+      <ellipse cx="72" cy="50" rx="19" ry="9"/>
+      <ellipse cx="34" cy="34" rx="9" ry="18" transform="rotate(-45 34 34)"/>
+      <ellipse cx="66" cy="34" rx="9" ry="18" transform="rotate(45 66 34)"/>
+      <ellipse cx="34" cy="66" rx="9" ry="18" transform="rotate(45 34 66)"/>
+      <ellipse cx="66" cy="66" rx="9" ry="18" transform="rotate(-45 66 66)"/>
+    </g>
+    <circle class="margarita-centro" cx="50" cy="50" r="12"/>
+  </svg>
+
+  <svg class="margarita margarita-4" viewBox="0 0 100 100">
+    <g class="margarita-petalos">
+      <ellipse cx="50" cy="28" rx="9" ry="19"/>
+      <ellipse cx="50" cy="72" rx="9" ry="19"/>
+      <ellipse cx="28" cy="50" rx="19" ry="9"/>
+      <ellipse cx="72" cy="50" rx="19" ry="9"/>
+      <ellipse cx="34" cy="34" rx="9" ry="18" transform="rotate(-45 34 34)"/>
+      <ellipse cx="66" cy="34" rx="9" ry="18" transform="rotate(45 66 34)"/>
+      <ellipse cx="34" cy="66" rx="9" ry="18" transform="rotate(45 34 66)"/>
+      <ellipse cx="66" cy="66" rx="9" ry="18" transform="rotate(-45 66 66)"/>
+    </g>
+    <circle class="margarita-centro" cx="50" cy="50" r="12"/>
+  </svg>
+
+<!-- MARGARITA 5 -->
+<svg class="margarita margarita-5" viewBox="0 0 100 100">
+  <g class="margarita-petalos">
+    <ellipse cx="50" cy="28" rx="9" ry="19"/>
+    <ellipse cx="50" cy="72" rx="9" ry="19"/>
+    <ellipse cx="28" cy="50" rx="19" ry="9"/>
+    <ellipse cx="72" cy="50" rx="19" ry="9"/>
+    <ellipse cx="34" cy="34" rx="9" ry="18" transform="rotate(-45 34 34)"/>
+    <ellipse cx="66" cy="34" rx="9" ry="18" transform="rotate(45 66 34)"/>
+    <ellipse cx="34" cy="66" rx="9" ry="18" transform="rotate(45 34 66)"/>
+    <ellipse cx="66" cy="66" rx="9" ry="18" transform="rotate(-45 66 66)"/>
+  </g>
+  <circle class="margarita-centro" cx="50" cy="50" r="12"/>
+</svg>
+
+<!-- MARGARITA 6 -->
+<svg class="margarita margarita-6" viewBox="0 0 100 100">
+  <g class="margarita-petalos">
+    <ellipse cx="50" cy="28" rx="9" ry="19"/>
+    <ellipse cx="50" cy="72" rx="9" ry="19"/>
+    <ellipse cx="28" cy="50" rx="19" ry="9"/>
+    <ellipse cx="72" cy="50" rx="19" ry="9"/>
+    <ellipse cx="34" cy="34" rx="9" ry="18" transform="rotate(-45 34 34)"/>
+    <ellipse cx="66" cy="34" rx="9" ry="18" transform="rotate(45 66 34)"/>
+    <ellipse cx="34" cy="66" rx="9" ry="18" transform="rotate(45 34 66)"/>
+    <ellipse cx="66" cy="66" rx="9" ry="18" transform="rotate(-45 66 66)"/>
+  </g>
+  <circle class="margarita-centro" cx="50" cy="50" r="12"/>
+</svg>
+
+</div>
+
+    <p class="evento-etiqueta">
+      Recepción
+    </p>
+
+    <h3>
+      Salón Margarita
+    </h3>
+
+    <p class="evento-hora">
+      7:30 PM
+    </p>
+
+    <p class="evento-direccion">
+      Hotel Posada Señorial<br>
+      Puebla
+    </p>
+
+    <a
+      class="evento-boton"
+      href="https://www.google.com/maps/search/?api=1&query=Hotel+Posada+Senorial+Puebla"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VER UBICACIÓN
+    </a>
+
+  </article>
+
+</section>
+
+<!-- CODIGO DE VESTIMENTA -->
+
+<section class="vestimenta" id="vestimenta">
+
+  <p class="vestimenta-etiqueta">
+    Dress Code
+  </p>
+
+  <h2 class="vestimenta-titulo">
+    Formal
+  </h2>
+
+  <div class="vestimenta-iconos">
+
+    
+<!-- VESTIDO EDITORIAL -->
+<svg viewBox="0 0 100 145" aria-label="Vestido formal" role="img">
+  <g fill="none" stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <path d="M42 14 Q40 22 33 28 Q26 34 30 48
+             Q35 58 33 69
+             C30 91 19 113 15 131
+             Q50 140 85 131
+             C81 111 68 89 67 69
+             Q65 58 70 48
+             Q74 34 67 28
+             Q60 22 58 14"/>
+    <path d="M42 14 Q50 25 58 14
+             M33 28 Q50 37 67 28
+             M33 69 Q50 73 67 69"/>
+    <path d="M38 76 Q32 101 25 128
+             M62 76 Q68 104 76 129"
+          opacity="0.4"/>
+  </g>
+</svg>
+
+<!-- TRAJE EDITORIAL -->
+<svg viewBox="0 0 100 145" aria-label="Traje formal" role="img">
+  <g fill="none" stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <path d="M38 19 L21 27 Q15 32 14 44
+             L10 128 Q50 134 90 128
+             L86 44 Q85 32 79 27 L62 19"/>
+    <path d="M38 19 L50 41 L62 19
+             M38 19 L30 29 L40 53
+             L50 67 L60 53 L70 29 L62 19"/>
+    <path d="M50 41 L50 117
+             M21 27 L25 85 L19 126
+             M79 27 L75 85 L81 126"/>
+    <path d="M42 24 L50 30 L58 24
+             M50 30 L47 37 L50 49 L53 37 Z"/>
+    <path d="M33 77 L42 77 M32 80 L43 80"
+          opacity="0.6"/>
+    <circle cx="54" cy="82" r="1.5"
+            fill="currentColor" stroke="none"/>
+    <circle cx="54" cy="98" r="1.5"
+            fill="currentColor" stroke="none"/>
+  </g>
+</svg>
+
+
+  </div>
+
+  <div class="vestimenta-linea"></div>
+
+</section>
+
+<!-- MESA DE REGALOS -->
+
+<section class="regalos" id="regalos">
+
+<!-- MOÑO DECORATIVO · MESA DE REGALOS -->
+<svg class="regalos-mono"
+     viewBox="0 0 320 190"
+     aria-hidden="true">
+
+  <!-- LAZADA IZQUIERDA -->
+  <path class="mono-trazo mono-lazada-1"
+        d="M155 81
+           C119 44, 72 39, 70 67
+           C68 91, 115 103, 155 84" />
+
+  <!-- LAZADA DERECHA -->
+  <path class="mono-trazo mono-lazada-2"
+        d="M165 84
+           C194 48, 244 42, 247 70
+           C250 96, 199 105, 165 84" />
+
+  <!-- LISTÓN IZQUIERDO -->
+  <path class="mono-trazo mono-liston-1"
+        d="M151 86
+           C131 100, 109 123, 82 151
+           L99 147 L112 167
+           C130 138, 140 110, 155 88" />
+
+  <!-- LISTÓN DERECHO -->
+  <path class="mono-trazo mono-liston-2"
+        d="M169 85
+           C191 98, 216 115, 247 134
+           L231 140 L227 163
+           C204 138, 182 113, 166 88" />
+
+  <!-- NUDO CENTRAL -->
+  <path class="mono-trazo mono-nudo"
+        d="M152 79
+           Q161 74 170 81
+           L170 91
+           Q160 98 152 89 Z" />
+
+</svg>
+
+  <p class="regalos-etiqueta">
+    Un detalle especial
+  </p>
+
+  <h2 class="regalos-titulo">
+    Mesa de regalos
+  </h2>
+
+  <p class="regalos-texto">
+    Tu presencia es el mejor regalo.
+    Si deseas tener un detalle conmigo,
+    he preparado una pequeña lista de deseos.
+  </p>
+
+  <a
+    class="regalos-boton"
+    href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/60077421"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    VER MESA DE REGALOS
+  </a>
+
+  <p class="regalos-referencia">
+    Liverpool · Evento 60077421
+  </p>
+
+</section>
+
+<!-- CONFIRMACION DE ASISTENCIA -->
+
+
+<section class="confirmacion" id="confirmacion">
+
+  <p class="confirmacion-etiqueta">
+    Nos encantará verte
+  </p>
+
+  <h2 class="confirmacion-titulo">
+    ¿Nos acompañas?
+  </h2>
+
+  <p class="confirmacion-texto">
+    Será un día muy especial y me encantará
+    compartirlo contigo.
+    <br><br>
+    Confirma tu asistencia por
+
+   WhatsApp
+
+    y consulta los
+    <span class="confirmacion-resaltado">
+      pases asignados a tu familia.
+    </span>
+  </p>
+
+  <a
+    class="confirmacion-boton"
+    id="botonConfirmar"
+    href="#"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    CONFIRMAR ASISTENCIA
+  </a>
+
+  <p class="confirmacion-nota">
+    La cantidad de pases será
+    <span class="confirmacion-resaltado">
+      confirmada por la persona encargada del evento.
+    </span>
+  </p>
+
+</section>
+
+
+<!-- CUENTA REGRESIVA -->
+
+<section class="cuenta-regresiva" id="cuenta-regresiva">
+
+  <p class="contador-etiqueta">
+    Cada día más cerca
+  </p>
+
+  <h2 class="contador-titulo">
+    La cuenta regresiva
+  </h2>
+
+  <div class="contador-numeros">
+
+    <div class="contador-unidad">
+      <div class="contador-caja">
+        <span class="contador-valor" id="dias">00</span>
+      </div>
+      <span class="contador-label">DÍAS</span>
+    </div>
+
+    <div class="contador-unidad">
+      <div class="contador-caja">
+        <span class="contador-valor" id="horas">00</span>
+      </div>
+      <span class="contador-label">HORAS</span>
+    </div>
+
+    <div class="contador-unidad">
+      <div class="contador-caja">
+        <span class="contador-valor" id="minutos">00</span>
+      </div>
+      <span class="contador-label">MIN</span>
+    </div>
+
+    <div class="contador-unidad">
+      <div class="contador-caja">
+        <span class="contador-valor" id="segundos">00</span>
+      </div>
+      <span class="contador-label">SEG</span>
+    </div>
+
+  </div>
+
+  <p class="contador-fecha">
+    17 DE DICIEMBRE DE 2026
+  </p>
+
+</section>
+
+
+<script>
+  const boton = document.getElementById("abrirInvitacion");
+  const portada = document.querySelector(".portada");
+  const bienvenida = document.getElementById("bienvenida");
+  const seccion = document.getElementById("invitacion");
+
+  boton.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    portada.classList.add("saliendo");
+
+    setTimeout(function() {
+      seccion.scrollIntoView({
+        behavior: "smooth"
+      });
+
+      setTimeout(function() {
+        bienvenida.classList.add("visible");
+      }, 500);
+
+    }, 650);
+  });
+  
+// WHATSAPP PARA CONFIRMACIONES
+
+const numeroWhatsApp = "522223607400";
+
+const mensajeWhatsApp =
+  "¡Hola! Recibí la invitación a los XV años de Dany.\n\n" +
+  "Mi nombre es: \n" +
+  "Familia: \n\n" +
+  "Me gustaría confirmar nuestra asistencia " +
+  "y consultar los pases que tenemos asignados. ¡Gracias!";
+
+const enlaceWhatsApp =
+  "https://wa.me/" +
+  numeroWhatsApp +
+  "?text=" +
+  encodeURIComponent(mensajeWhatsApp);
+
+document.getElementById("botonConfirmar").href =
+  enlaceWhatsApp;
+
+/* MOÑO · ANIMACIÓN AL ENTRAR EN PANTALLA */
+
+const monoRegalos = document.querySelector(".regalos-mono");
+
+if (monoRegalos) {
+  const observadorMono = new IntersectionObserver(
+    (entradas, observador) => {
+      entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("animar");
+          observador.unobserve(entrada.target);
+        }
+      });
+    },
+    {
+      threshold: 0.25
+    }
+  );
+
+  observadorMono.observe(monoRegalos);
+}
+
+/* CONFIRMACIÓN · ACTIVAR SUBRAYADO */
+
+const seccionConfirmacion = document.querySelector(
+  ".confirmacion"
+);
+
+if (seccionConfirmacion) {
+  const observadorConfirmacion = new IntersectionObserver(
+    (entradas, observador) => {
+      entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("animar");
+          observador.unobserve(entrada.target);
+        }
+      });
+    },
+    {
+      threshold: 0.35
+    }
+  );
+
+  observadorConfirmacion.observe(seccionConfirmacion);
+}
+
+</script>
+<script>
+// CUENTA REGRESIVA PARA LOS XV DE DANY
+// Fecha y hora de Puebla, México
+
+const fechaEvento = new Date("2026-12-17T17:00:00-06:00");
+
+function actualizarContador() {
+  const ahora = new Date();
+  const diferencia = Math.max(0, fechaEvento - ahora);
+
+  const dias = Math.floor(diferencia / 86400000);
+  const horas = Math.floor((diferencia / 3600000) % 24);
+  const minutos = Math.floor((diferencia / 60000) % 60);
+  const segundos = Math.floor((diferencia / 1000) % 60);
+
+  document.getElementById("dias").textContent =
+    String(dias).padStart(2, "0");
+
+  document.getElementById("horas").textContent =
+    String(horas).padStart(2, "0");
+
+  document.getElementById("minutos").textContent =
+    String(minutos).padStart(2, "0");
+
+  document.getElementById("segundos").textContent =
+    String(segundos).padStart(2, "0");
+}
+
+actualizarContador();
+setInterval(actualizarContador, 1000);
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const corazon = document.querySelector(".familia-corazon");
+
+  if (!corazon) return;
+
+const seccionFamilia = document.querySelector(".familia");
+const separadorFamilia = seccionFamilia.querySelector(".familia-separador");
+
+function centrarCorazon() {
+  if (!separadorFamilia) return;
+
+  const rectSeccion = seccionFamilia.getBoundingClientRect();
+  const rectSeparador = separadorFamilia.getBoundingClientRect();
+
+  const centroSeparador =
+    rectSeparador.top + rectSeparador.height / 2 - rectSeccion.top;
+
+  corazon.style.setProperty(
+    "--centro-corazon",
+    centroSeparador + "px"
+  );
+}
+
+centrarCorazon();
+window.addEventListener("resize", centrarCorazon);
+
+  const observadorCorazon = new IntersectionObserver(
+    function (entradas) {
+
+      entradas.forEach(function (entrada) {
+
+        if (entrada.isIntersecting) {
+          corazon.classList.add("animar");
+          observadorCorazon.unobserve(corazon);
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.3
+    }
+  );
+
+  observadorCorazon.observe(corazon);
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const rosario = document.querySelector(".rosario-decorativo");
+
+  if (!rosario) return;
+
+  const observadorRosario = new IntersectionObserver(
+    function (entradas) {
+
+      entradas.forEach(function (entrada) {
+
+        if (entrada.isIntersecting) {
+          rosario.classList.add("animar");
+          observadorRosario.unobserve(rosario);
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.3
+    }
+  );
+
+  observadorRosario.observe(rosario);
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const jardin = document.querySelector(".jardin-margaritas");
+
+  if (!jardin) return;
+
+  const observadorJardin = new IntersectionObserver(
+    function (entradas) {
+
+      entradas.forEach(function (entrada) {
+
+        if (entrada.isIntersecting) {
+          jardin.classList.add("animar");
+          observadorJardin.unobserve(jardin);
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.3
+    }
+  );
+
+  observadorJardin.observe(jardin);
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const iconos = document.querySelector(".vestimenta-iconos");
+
+  if (!iconos) return;
+
+  const observador = new IntersectionObserver(
+    function (entradas) {
+      entradas.forEach(function (entrada) {
+
+        if (entrada.isIntersecting) {
+          iconos.classList.add("animar");
+          observador.unobserve(iconos);
+        }
+
+      });
+    },
+    {
+      threshold: 0.4
+    }
+  );
+
+  observador.observe(iconos);
+
+});
+</script>
+
+</body>
+</html>
