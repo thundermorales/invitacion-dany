@@ -2290,25 +2290,40 @@ body::before {
     }, 650);
   });
   
-// WHATSAPP PARA CONFIRMACIONES
 
-const numeroWhatsApp = "522223607400";
+// CONFIRMACIÓN PERSONALIZADA · LABORATORIO
 
-const mensajeWhatsApp =
-  "¡Hola! Recibí la invitación a los XV años de Dany.\n\n" +
-  "Mi nombre es: \n" +
-  "Familia: \n\n" +
-  "Me gustaría confirmar nuestra asistencia " +
-  "y consultar los pases que tenemos asignados. ¡Gracias!";
+const parametrosInvitacion =
+  new URLSearchParams(window.location.search);
 
-const enlaceWhatsApp =
-  "https://wa.me/" +
-  numeroWhatsApp +
-  "?text=" +
-  encodeURIComponent(mensajeWhatsApp);
+const tokenFamiliar =
+  parametrosInvitacion.get("token");
 
-document.getElementById("botonConfirmar").href =
-  enlaceWhatsApp;
+const botonConfirmar =
+  document.getElementById("botonConfirmar");
+
+// Dirección del formulario de laboratorio.
+// Sustituiremos esta dirección por la URL real.
+const urlFormularioLaboratorio =
+  "https://script.google.com/macros/s/AKfycbyXddKXJGVCedoI6hEtSRZCOdxqi_vvImB12XHv_x7_K7mUNNViboBDTlZ7lFiGqYIE/exec";
+
+if (botonConfirmar) {
+  if (tokenFamiliar && tokenFamiliar.trim()) {
+    
+botonConfirmar.href =
+  urlFormularioLaboratorio +
+  "?vista=formulario&token=" +
+  encodeURIComponent(tokenFamiliar.trim());
+
+  } else {
+    // Evitar abrir un formulario sin identificación.
+    botonConfirmar.removeAttribute("href");
+    botonConfirmar.style.cursor = "not-allowed";
+    botonConfirmar.title =
+      "Esta invitación necesita un enlace personalizado.";
+  }
+}
+
 
 /* MOÑO · ANIMACIÓN AL ENTRAR EN PANTALLA */
 
