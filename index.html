@@ -2302,18 +2302,19 @@ const tokenFamiliar =
 const botonConfirmar =
   document.getElementById("botonConfirmar");
 
-// Dirección del formulario de laboratorio.
-// Sustituiremos esta dirección por la URL real.
-const urlFormularioLaboratorio =
-  "https://script.google.com/macros/s/AKfycbyXddKXJGVCedoI6hEtSRZCOdxqi_vvImB12XHv_x7_K7mUNNViboBDTlZ7lFiGqYIE/exec";
+// Dirección del portal definitivo de confirmaciones.
+const urlFormularioDefinitivo =
+  "https://script.google.com/macros/s/AKfycbyt4PldNGlacK1Zn1Uoz4tZYjr9aj6fF_IuWGtoyPa4hjRJ9YeWziSAE9H7HhwWqirf/exec";
+
+
 
 if (botonConfirmar) {
   if (tokenFamiliar && tokenFamiliar.trim()) {
-    
-botonConfirmar.href =
-  urlFormularioLaboratorio +
-  "?vista=formulario&token=" +
-  encodeURIComponent(tokenFamiliar.trim());
+
+    botonConfirmar.href =
+      urlFormularioDefinitivo +
+      "?token=" +
+      encodeURIComponent(tokenFamiliar.trim());
 
   } else {
     // Evitar abrir un formulario sin identificación.
@@ -2323,6 +2324,8 @@ botonConfirmar.href =
       "Esta invitación necesita un enlace personalizado.";
   }
 }
+
+
 
 
 /* MOÑO · ANIMACIÓN AL ENTRAR EN PANTALLA */
