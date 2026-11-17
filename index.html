@@ -1627,6 +1627,32 @@ body::before {
 .control-musica:hover { background: #0A705C; transform: scale(1.05); }
 .control-musica:focus-visible { outline: 3px solid #B7D96B; outline-offset: 3px; }
 
+        /* Aquí terminan los estilos que ya tienes */
+
+/* ADVERTENCIA DE CONFIRMACIÓN */
+
+.confirmacion-advertencia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 14px auto 0;
+  max-width: 440px;
+  color: #64736d;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.confirmacion-advertencia-icono {
+  color: #176a59;
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+
+        
   </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2132,27 +2158,22 @@ body::before {
 
 <section class="confirmacion" id="confirmacion">
 
-  <p class="confirmacion-etiqueta">
-    Nos encantará verte
-  </p>
-
-  <h2 class="confirmacion-titulo">
-    ¿Nos acompañas?
-  </h2>
-
-  
+ 
 <p class="confirmacion-texto">
   Será un día muy especial y me encantará
   compartirlo contigo.
-  <br><br>
-  Por favor, confirma tu asistencia antes del
-  <span class="confirmacion-resaltado">
-    30 de noviembre de 2026.
-  </span>
-  <br><br>
-  Consulta los pases asignados a tu familia
-  y registra tu respuesta.
 </p>
+
+<h2 class="confirmacion-titulo">
+  ¿Nos acompañas?
+</h2>
+
+<p class="confirmacion-texto">
+  Consulta tus pases asignados y registra
+  tu respuesta.
+</p>
+
+
 
   <a
     class="confirmacion-boton"
@@ -2164,12 +2185,23 @@ body::before {
     CONFIRMAR ASISTENCIA
   </a>
 
-  <p class="confirmacion-nota">
-    La cantidad de pases será
-    <span class="confirmacion-resaltado">
-      confirmada por la persona encargada del evento.
-    </span>
-  </p>
+ 
+<p class="confirmacion-nota">
+  Por favor, confirma tu asistencia antes del
+  <span class="confirmacion-resaltado">
+    30 de noviembre de 2026.
+  </span>
+</p>
+
+<p class="confirmacion-advertencia">
+  <span class="confirmacion-advertencia-icono" aria-hidden="true">
+    ⚠
+  </span>
+  <span>
+    Tu confirmación será definitiva y no podrá modificarse.
+  </span>
+</p>
+
 
 </section>
 
