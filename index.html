@@ -393,6 +393,7 @@
 
 .confirmacion-boton {
   display: inline-flex;
+      flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -1988,7 +1989,7 @@ body::before {
     </h3>
 
     <p class="evento-hora">
-      7:30 PM
+      7:00 PM
     </p>
 
     <p class="evento-direccion">
@@ -2160,10 +2161,12 @@ body::before {
 
  
 
-<p class="confirmacion-texto" style="text-align: center;">
-  Será un día muy especial y me encantaría<br>
-  compartirlo contigo.
+
+<p class="confirmacion-texto">
+  Presiona el botón para consultar tus pases
+  y registrar tu respuesta.
 </p>
+
 
 
 <h2 class="confirmacion-titulo">
@@ -2177,15 +2180,17 @@ body::before {
 
 
 
-  <a
-    class="confirmacion-boton"
-    id="botonConfirmar"
-    href="#"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    CONFIRMAR ASISTENCIA
-  </a>
+
+<a
+  class="confirmacion-boton"
+  id="botonConfirmar"
+  href="#"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  CONFIRMAR / DECLINAR<br>
+  ASISTENCIA
+</a>
 
  
 
